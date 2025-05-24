@@ -1,7 +1,8 @@
 import { Permanent_Marker } from 'next/font/google';
 import { auth } from '@/lib/auth';
 import { redirect } from 'next/navigation';
-import { LoginClientForm } from './(auth)/login/_components/LoginForm';
+import { LoginForm } from './(auth)/login/_components/LoginForm';
+// import { LoginForm } from './(auth)/login/_components/LoginForm';
 
 // If you're using a specific font
 const permanentMarker = Permanent_Marker({
@@ -49,7 +50,7 @@ export default async function LoginPage() {
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8">Sign in to your account</p>
 
           {/* Render the client-side login form */}
-          <LoginClientForm />
+          <LoginForm />
         </div>
       </div>
     </div>

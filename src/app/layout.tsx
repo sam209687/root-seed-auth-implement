@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme/theme-provider"; // Create this
 import { SessionProvider } from "next-auth/react"; // Wrap application with SessionProvider
-import { ThemeToggle } from "../components/theme/ThemeToggle"; // Create this component
+import { Toaster } from "@/components/ui/sonner";
+// import { ThemeToggle } from "../components/theme/ThemeToggle"; // Create this component
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,11 +29,10 @@ enableSystem
 disableTransitionOnChange
 >
 <div className="min-h-screen flex flex-col">
-<header className="flex justify-end p-4">
-<ThemeToggle />
-</header>
+
 <main className="flex-grow">
 {children}
+<Toaster />
 </main>
 </div>
 </ThemeProvider>

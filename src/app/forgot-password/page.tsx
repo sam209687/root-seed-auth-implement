@@ -65,7 +65,8 @@ export default function ForgotPasswordPage() {
           title="Forgot Password"
           description="Enter your email to receive a password reset OTP."
         >
-          <CustomForm form={form} onSubmit={onSubmit} className="space-y-4">
+          {/* This line remains unchanged, as per your desired UI */}
+          <CustomForm form={form} onSubmit={form.handleSubmit(onSubmit)} className="space-y-4"> {/* Corrected onSubmit here based on prior discussions */}
             <CustomFormField
               name="email"
               label="Email"

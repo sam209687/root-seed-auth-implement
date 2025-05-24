@@ -3,7 +3,7 @@
 import { auth } from "../../../../lib/auth";
 import { redirect } from "next/navigation";
 import { Toaster } from "../../../../components/ui/sonner";
-import { Sidebar, cashierNavItems } from '../../../../components/re-useable-componants/Sidebar';
+// import { Sidebar, cashierNavItems } from '../../../../components/re-useable-componants/Sidebar';
 import { UserRole, User } from '../../../../lib/models/User'; // Ensure User is imported
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "../../../../components/ui/card";
 import { ShoppingCart } from "lucide-react";
@@ -24,13 +24,13 @@ export default async function CashierDashboardPage() {
 
   return (
     <div className="flex h-screen overflow-hidden">
-      <Sidebar
+      {/* <Sidebar
         header="Cashier POS"
         navItems={cashierNavItems}
         currentUserEmail={currentUser.email || "Cashier"}
         // Change currentUserRole to use the enum member
         currentUserRole={UserRole.Cashier} // <-- FIX THIS LINE
-      />
+      /> */}
       <main className="flex-1 p-6 md:p-8 overflow-y-auto lg:ml-64">
         <h1 className="text-3xl md:text-4xl font-bold mb-8">Cashier Dashboard</h1>
 
